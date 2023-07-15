@@ -26,5 +26,42 @@
     return filtered_list
     
    #print(my_filter(function, iterable))   
+
+
+# Implement enumerate function
+
+  def enumerate_func(iterable, start=0):
+    index = start
+    for element in iterable:
+        yield index, element
+        index += 1
+
+
+# Implement map function
+
+  def my_map(function, iterable):
+    result = []
+    for item in iterable:
+        result.append(function(item))
+    return result
+
+
+# Write a function called counter that returns a closure. The closure should keep track of the number of times it has been called and return that count.
+
+  def counter():
+    count = 0
+    def inner():
+        nonlocal count
+        count += 1
+        return count
+    return inner
+
+
+
+
+
+
+
+
     
     
